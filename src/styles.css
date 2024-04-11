@@ -1,0 +1,26 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+
+    gap: 10px;
+}
+
+/* Main Content */
+#content {
+    display: flex;
+    justify-content: center;
+}
