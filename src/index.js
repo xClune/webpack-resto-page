@@ -4,24 +4,34 @@ console.log('test message')
 
 // Event Listeners 
 
-const home = document.querySelector('.home-btn')
-const menu = document.querySelector('.menu-btn')
-const about = document.querySelector('.about-btn')
+const home = document.querySelector('.home-btn');
+const menu = document.querySelector('.menu-btn');
+const about = document.querySelector('.about-btn');
 
 const content = document.getElementById('content');
 
 home.addEventListener('click', () => {
-    content.innerText = homeContent;
+    console.log('something')
+    content.innerHTML = generateContent('Home');
 })
 
 menu.addEventListener('click', () => {
-    content.innerText = menuContent;
+    content.innerHTML = generateContent('Menu');
 })
 
 about.addEventListener('click', () => {
-    content.innerText = aboutContent;
+    content.innerHTML = generateContent('About');
 })
 
-const homeContent = "Content for home page";
-const menuContent = "Content for menu page";
-const aboutContent = "Content for about page";
+function generateContent(field) {
+    return (
+    `
+        <div class="main">
+            <h1 class="title">${field}</h1>
+            <div class="section-1">Section 1</div>
+            <div class="section-2">Section 2</div>
+            <div class="section-3">Section 3</div>
+        </div>
+    `
+    )
+}
